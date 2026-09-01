@@ -19,13 +19,20 @@
         </header>
 
         <div class="container">
-            <textarea class="space-text" placeholder="Copie e cole o link do vídeo que você deseja baixar" required autofocus></textarea>
-            <button type="submit" class="submit">
-                <i class="fa-solid fa-download"></i>
-                Submit
-            </button>
+            <form action="/download" method="POST">
+                <textarea class="space-text" placeholder="Copie e cole o link do vídeo que você deseja baixar" required autofocus></textarea>
+                <button type="submit" class="submit">
+                    <i class="fa-solid fa-download"></i>
+                    Submit
+                </button>
+            </form>
+
+            {% if mensagem %}
+                <p class="mensagem">{{ mensagem }}</p>
+            {% endif %}
 
         </div>
+        
         <div class="contato">
                 <li>GitHub: Larissa Romero</li>
                 <li>Instagram: Larissa Romero</li>
